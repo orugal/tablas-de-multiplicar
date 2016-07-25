@@ -1,1 +1,4 @@
 /* Empty. Add your own CSS if you like */
+*{font-family: 'Crafty Girls','Ionicons';}
+body{background:#BC7CEA;}
+.radiusBtn{border-radius:100px;padding:10%;width:80px;height: 80px;box-shadow: 1px 1px 3px #8900DC}

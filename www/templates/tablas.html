@@ -1,4 +1,4 @@
-<ion-view view-title="Tablas de multiplicar">
+<ion-view view-title="Tablas de multiplicar" ng-init="initTablas()" >
   <ion-content>
 
 	    <div class="list">
@@ -7,11 +7,19 @@
 		  </label>
 		</div>
 
-		<div class="list" style="font-size:1.8em">
+		<div class="list" style="font-size:1.8em;padding:3%">
 			<center>
 				<table width="100%">
+					<tr>
+						<th colspan="4" align="center">
+							Tabla del {{numero}}		
+						</th>
+					</tr>
 			  		<tr ng-repeat="a in [1,2,3,4,5,6,7,8,9,10]">
-			  			<td style="padding:3%" align="center">{{numero}}</td><td style="padding:3%" align="center"> X</td><td style="padding:3%" align="center"> {{a}}</td><td style="padding:3%" align="center"> = {{numero * a | number}}</td>
+			  			<td style="padding:3%" align="center">{{numero}}</td>
+			  			<td style="padding:3%" align="center"> X</td>
+			  			<td style="padding:3%" align="center"> {{a}}</td>
+			  			<td style="padding:3%" align="center"> = {{numero * a | number}}</td>
 			  		</tr>
 		  		</table>
 	  		</center>

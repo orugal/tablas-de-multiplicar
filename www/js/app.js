@@ -62,8 +62,18 @@ angular.module('starter', ['ionic', 'starter.controllers'])
       }
     })
 
+
+    .state('app.jugarMain', {
+      url: '/jugarMain',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/jugarMain.html',
+          controller: 'jugarMainCtrl'
+        }
+      }
+    })
     .state('app.jugar', {
-      url: '/jugar',
+      url: '/jugar/:nroTabla',
       views: {
         'menuContent': {
           templateUrl: 'templates/jugar.html',
@@ -81,6 +91,7 @@ angular.module('starter', ['ionic', 'starter.controllers'])
       }
     }
   });
+
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/app/tablas');
 });
