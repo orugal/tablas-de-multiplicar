@@ -1,0 +1,25 @@
+<ion-view view-title="Tablas de multiplicar">
+  <ion-content>
+
+	    <div class="list">
+		  <label class="item item-input">
+		    <input type="number" placeholder="Escribe un número" ng-model="numero">
+		  </label>
+		</div>
+
+		<div class="list" style="font-size:1.8em">
+			<center>
+				<table width="100%">
+			  		<tr ng-repeat="a in [1,2,3,4,5,6,7,8,9,10]">
+			  			<td style="padding:3%" align="center">{{numero}}</td><td style="padding:3%" align="center"> X</td><td style="padding:3%" align="center"> {{a}}</td><td style="padding:3%" align="center"> = {{numero * a | number}}</td>
+			  		</tr>
+		  		</table>
+	  		</center>
+		</div>
+
+      <!--<ion-item ng-repeat="playlist in playlists" href="#/app/playlists/{{playlist.id}}">
+        {{playlist.title}}
+      </ion-item>-->
+
+  </ion-content>
+</ion-view>

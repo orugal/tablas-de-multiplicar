@@ -1,0 +1,30 @@
+<ion-view view-title="Vamos a jugar!!" ng-init="initGame()">
+  <ion-content>
+	    <div class="list">
+	      <p style="padding:3%">
+	      	Vamos a jugar con las tablas de multiplicar, el juego es muy fácil, yo te doy una operación y tu me debes dar el resultado, listo?<br><br>
+			 <button class="button button-block button-positive" ng-click="jugar()" ng-if="jugando == 0">
+			  Empezar Juego
+			</button>
+	      </p>
+		</div>
+		<div class="list" style="font-size:3.5em;padding:3%">
+			<center>
+				<table width="100%" ng-if="numero1 != '' || numero1 != 0">
+			  		<tr>
+			  			<td style="padding:3%" align="center">{{numero1}}</td>
+			  			<td style="padding:3%" align="center"> X </td>
+			  			<td style="padding:3%" align="center"> {{numero2}} </td>
+			  			<td style="padding:3%" align="center"> = </td>
+			  			<td style="padding:3%" align="center"> ? </td>
+			  		</tr>
+		  		</table>
+	  		</center>
+	  		<br><br>
+			<div ng-repeat="btn in botones">
+		  		<button class="button button-block button-assertive" ng-click="validar(1)" ng-if="btn.real==1">{{btn.res}}</button>
+		  		<button class="button button-block button-assertive" ng-click="validar(0)" ng-if="btn.real==0">{{btn.res}}</button>
+			</div>
+		</div>
+  </ion-content>
+</ion-view>
