@@ -72,6 +72,17 @@ angular.module('starter', ['ionic', 'starter.controllers'])
         }
       }
     })
+    .state('app.acerca', {
+      url: '/acerca',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/acerca.html',
+          controller: 'acercaCtrl'
+        }
+      }
+    })
+
+
     .state('app.jugar', {
       url: '/jugar/:nroTabla',
       views: {

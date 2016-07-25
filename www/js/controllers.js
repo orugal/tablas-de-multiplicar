@@ -110,6 +110,10 @@ angular.module('starter.controllers', [])
     }
 })
 
+.controller('acercaCtrl', function($scope) {
+    
+})
+
 .controller('jugarCtrl', function($scope, $stateParams, $ionicPopup) 
 {
     $scope.numero1 = $stateParams.nroTabla;
